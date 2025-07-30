@@ -120,7 +120,7 @@ body {
 }
 
 .banner {
-  background-image: url(Vector.png);
+  background-image: url(assets/Vector.png);
   background-position: center;
   background-size: cover;
   background-repeat: repeat-x;
@@ -236,7 +236,7 @@ body {
 }
 
 .sobre {
-  background-image: url(Vector.png);
+  background-image: url(assets/Vector.png);
   background-position: center;
   background-size: contain;
   background-repeat: repeat;
@@ -456,12 +456,18 @@ body {
 
 .image-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: fit-content;
   display: inline-block;
+   margin: 0 auto; /* centraliza horizontalmente */
   top: 52vh;
   left: 5vw;
   position: relative;
   z-index: 10;
+  scale: 1;
   margin-top: -43.2vh;
 }
 
@@ -539,6 +545,18 @@ body {
     margin-top: -110vh;
   }
 
+  .arte {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* se quiser empilhar */
+  width: fit-content;
+  scale: 1;
+  transition: scale 0.3s ease;
+}
+
+
   .effect {
     width: 240px;
     flex-direction: column;
@@ -549,10 +567,10 @@ body {
   }
 
   .ian {
-    width: 60vw;
-    height: aut11;
+    width: 80vw;
+    height: auto;
     margin-bottom: 1.5rem;
-    margin-top: 70vh;
+    margin-top: 90vh;
   }
 
   .history {
@@ -582,30 +600,26 @@ body {
   .text1 {
     font-size: 1rem;
   }
+
+}
+
+@media (max-width: 768px) {
+  .image-wrapper {
+    scale: 0.8;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-wrapper {
+    scale: 0.65;
+  }
 }
 
 .list{
   margin-top: -20vh;
 }
 
-.rectangle2{
-  background-color: #0066FF;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  margin-top: 3vh;
-}
 
-/* Linha superior */
-.rectangle {
-  background-color: #0066FF;
-  width: 100%;
-  height: 2px;
-  position: absolute;
-  top: 252.5vh; /* ajustável */
-  left: 0;
-  z-index: 5;
-}
 
 .habil {
   font-size: 30px;
@@ -625,7 +639,7 @@ body {
 }
 
 .carrossel-container {
-  margin-top: 60vh;
+  margin-top: 25rem; /* ajuste conforme necessário */
   overflow: hidden;
   width: 100%;
   background-color: #c6e7fa;
@@ -636,16 +650,19 @@ body {
   display: flex;
   animation: scroll-left 45s linear infinite;
   width: max-content;
+  flex-wrap: nowrap;
 }
 
 .item {
   display: flex;
   align-items: center;
-  margin: 0 2rem;
+  margin: 0 1rem;
+  flex: 0 0 auto;
 }
 
 .item img {
   width: 60px;
+  height: auto;
   margin-right: 10px;
 }
 
@@ -664,15 +681,25 @@ body {
   }
 }
 
-@media (max-width: 768px){
-  .carrossel-container{
-    margin-top: 130vh;
+@media (max-width: 480px) {
+  .item {
+    margin: 0 0.5rem;
   }
 
-  .rectangle{
-    margin-top: 177vh;
+  .item img {
+    width: 40px;
   }
+
+  .item p {
+    font-size: 0.9rem;
+  }
+
+  .carrossel-container {
+    margin-top: 60rem;
+  }
+
 }
+
 
 #contato {
   display: flex;
