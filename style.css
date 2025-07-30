@@ -120,7 +120,7 @@ body {
 }
 
 .banner {
-  background-image: url(assets/Vector.png);
+  background-image: url(Vector.png);
   background-position: center;
   background-size: cover;
   background-repeat: repeat-x;
@@ -236,7 +236,7 @@ body {
 }
 
 .sobre {
-  background-image: url(assets/Vector.png);
+  background-image: url(Vector.png);
   background-position: center;
   background-size: contain;
   background-repeat: repeat;
